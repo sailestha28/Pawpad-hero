@@ -1,0 +1,126 @@
+/* ========================
+## mixin scss
+=============================*/
+@mixin  btn {
+        padding: .33rem 1rem;
+        border: none;
+        color: #000;
+        font-size: .88rem;
+    
+}
+@mixin  btn-hover {
+        background-color: rgb(246, 246, 247);
+    
+}
+
+
+@mixin bp($point) {
+    @if $point==largedesktop {
+        @media (max-width: 1660px) {
+            @content ;
+        }
+    }
+    @else if $point==lg {
+        @media (max-width: 1440px) {
+            @content ;
+        }
+    }
+    @else if $point==md {
+        @media (max-width: 1366px) {
+            @content ;
+        }
+    }
+    @else if $point==sm {
+        @media (max-width: 1280px) {
+            @content ;
+        }
+    }
+    @else if $point==t {
+        @media (max-width: 1024px) {
+            @content ;
+        }
+    }
+    @else if $point==bt {
+        @media (max-width: 991px) {
+            @content ;
+        }
+    }
+    @else if $point==bm {
+        @media (max-width: 767px) {
+            @content ;
+        }
+    }
+    @else if $point==m {
+        @media (max-width: 575px) {
+            @content ;
+        }
+    }
+}
+
+@mixin up($point) {
+    @if $point==largedesktop {
+        @media (min-width: 1661px) {
+            @content ;
+        }
+    }
+    @else if $point==lg {
+        @media (min-width: 1441px) {
+            @content ;
+        }
+    }
+    @else if $point==md {
+        @media (min-width: 1367px) {
+            @content ;
+        }
+    }
+    @else if $point==sm {
+        @media (min-width: 1281px) {
+            @content ;
+        }
+    }
+    @else if $point==t {
+        @media (min-width: 1025px) {
+            @content ;
+        }
+    }
+    @else if $point==bt {
+        @media (min-width: 992px) {
+            @content ;
+        }
+    }
+    @else if $point==bm {
+        @media (min-width: 768px) {
+            @content ;
+        }
+    }
+    @else if $point==m {
+        @media (min-width: 576px) {
+            @content ;
+        }
+    }
+}
+
+@mixin btn-primary {
+    height: 45px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    background: #FCB040;
+    border-radius: 3px;
+    border: none;
+    padding: 0.3rem 2rem;
+}
+
+@mixin link {
+    color: var(--green);
+}
+
+
+
+/*======================================================
+    ### Mixin scss
+ =======================================================*/

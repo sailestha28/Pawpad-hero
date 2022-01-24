@@ -1,0 +1,28 @@
+/* ### Common scss */
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  @include up(bm) {
+    width: 750px;
+  }
+  @include up(bt) {
+    width: 970px;
+  }
+  @include up(sm) {
+    width: 1170px;
+  }
+}
+
+.vertical-scrolling{
+  position: relative;
+}
+
+#fp-nav{
+  display: none;
+}
+
+
+/* ###End Common scss */

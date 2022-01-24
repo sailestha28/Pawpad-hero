@@ -1,0 +1,148 @@
+/* =============
+### header scss
+=================*/
+
+.header-top {
+    background: transparent !important;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 12;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .header-wrap {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .toggle-menu {
+        width: 50px;
+        position: relative;
+        height: 50px;
+        i {
+            position: absolute;
+            display: block;
+            height: 2px;
+            background: white;
+            width: 30px;
+            left: 10px;
+            transition: all 0.3s;
+        }
+    }
+}
+
+.toggle-menu i:nth-child(1) {
+    top: 16px;
+}
+
+.toggle-menu i:nth-child(2) {
+    top: 24px;
+}
+
+.toggle-menu i:nth-child(3) {
+    top: 32px;
+}
+
+.open-menu i:nth-child(1) {
+    top: 25px;
+    transform: rotateZ(45deg);
+}
+
+.open-menu i:nth-child(2) {
+    background: transparent;
+}
+
+.open-menu i:nth-child(3) {
+    top: 25px;
+    transform: rotateZ(-45deg);
+}
+
+nav {
+    height: 0;
+    opacity: 0;
+    box-sizing: border-box;
+    background: rgba(0, 47, 77, 0.25);
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    transition: all 3s;
+}
+
+.open-menu ~ nav {
+    opacity: 1;
+    padding: 80px 0;
+    z-index: 15;
+    height: calc(90vh - 70px);
+}
+
+nav ul {
+    padding: 0 10px;
+    display: flex;
+}
+
+nav li {
+    flex: 1;
+}
+
+nav li a {
+    font-size: 2em;
+    display: block;
+    padding: 30px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+nav li:nth-child(odd) a,
+body.fp-viewing-fifthSection-1 #menu li:nth-child(5) a {
+    background: #962d3e;
+}
+
+nav li:nth-child(even) a {
+    background: #aa3346;
+}
+
+nav li:nth-child(odd) a:hover {
+    background: #9e2f41;
+}
+
+nav li:nth-child(even) a:hover {
+    background: #c53c52;
+}
+
+nav li.active a,
+body.fp-viewing-fifthSection-1 #menu li:last-child a {
+    background: #453659;
+}
+
+
+
+
+/* SLIDENAV STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: white;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    background: transparent;
+    box-sizing: border-box;
+    border: 1px solid #24221f;
+}
+
+/* =============
+###End header scss
+=================*/
