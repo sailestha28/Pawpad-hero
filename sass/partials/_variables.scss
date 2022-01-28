@@ -1,6 +1,6 @@
 :root {
     --body-font: "Rubik", sans-serif;
-    --font-bold: bold;
+    --second-font: "Eveleth Regular";
 }
 
 :root {
@@ -10,11 +10,9 @@
     --red: #f70559;
 }
 
-:root{
---border: #cdd1de;
+:root {
+    --border: #cdd1de;
 }
-
-
 
 @keyframes updown {
     0% {
@@ -33,28 +31,21 @@
 
 .clearfix:before,
 .clearfix:after {
-  content: "";
-  display: table;
+    content: "";
+    display: table;
 }
 
 .clearfix:after {
-  clear: both;
+    clear: both;
 }
 
 .l-left {
-	float: left;
+    float: left;
 }
 
 .l-right {
-	float: right;
+    float: right;
 }
-
-
-
-
-
-
 
 /* NAV STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
