@@ -60,13 +60,13 @@ $(document).ready(function () {
 
   // fullpage customization
   $('#fullpage').fullpage({
-    sectionsColor: ['#B8AE9C', '#348899', '#F2AE72', '#5C832F', '#B8B89F', "#B8B89F", "#B8B89F"],
+    sectionsColor: ['#B8AE9C', '#348899', '#F2AE72', '#5C832F', '#B8B89F', "#B8B89F", "#B8B89F", "#B8B89F", "#B8B89F"],
     sectionSelector: '.vertical-scrolling',
     slideSelector: '.horizontal-scrolling',
     navigation: true,
     slidesNavigation: true,
     controlArrows: false,
-    anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection'],
+    anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection','eightSection','nineSection'],
     menu: '#menu',
 
     afterLoad: function (anchorLink, index) {
@@ -75,7 +75,7 @@ $(document).ready(function () {
       if (index == 5) {
         $('#fp-nav').hide();
       }
-      history.pushState(null, null, " ");
+      // history.pushState(null, null, " ");
     },
 
     onLeave: function (index, nextIndex, direction) {
@@ -89,7 +89,7 @@ $(document).ready(function () {
         console.log( nextIndex);
         $('#menu li:first-child').addClass('active');
       }
-      history.pushState(null, null, " ");
+      // history.pushState(null, null, " ");
       setTimeout(() => {
         $('.section-2.active .animate:first-child').hide();
       }, 2000);
