@@ -27,6 +27,7 @@
 .scroll-icon {
   display: inline-block;
   position: absolute;
+  bottom: 30px;
   @include up(bm) {
     right: 50%;
     transform: translateX(50%);
@@ -34,7 +35,6 @@
   @include bp(bm) {
     right: calc(15px + 15px);
   }
-  bottom: 20px;
   > a {
     display: flex;
     align-items: center;
@@ -120,7 +120,7 @@
         }
         span {
           display: inline-block;
-          border: 1px  solid #fff;
+          border: 1px solid #fff;
           color: #000;
           padding: 0 6px;
           background-color: white;
@@ -131,7 +131,7 @@
   }
   .radio-wrap {
     position: relative;
- margin-bottom: 15px;
+    margin-bottom: 15px;
     input[type="radio"] {
       position: initial;
       visibility: hidden;
