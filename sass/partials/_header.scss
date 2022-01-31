@@ -10,8 +10,12 @@
     width: 100%;
     z-index: 12;
     box-sizing: border-box;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include bp(bm) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
     .header-wrap {
         display: flex;
         align-items: center;
@@ -22,6 +26,10 @@
         width: 50px;
         position: relative;
         height: 50px;
+        display: none;
+        @include bp(bm) {
+            display: block;
+        }
         i {
             position: absolute;
             display: block;
@@ -30,6 +38,32 @@
             width: 30px;
             left: 10px;
             transition: all 0.3s;
+        }
+    }
+    .l-middle {
+        .desktop-image {
+            @include bp(bm) {
+                display: none;
+            }
+        }
+        .mobile-image {
+            @include up(bm) {
+                display: none;
+            }
+        }
+    }
+    .l-right {
+        @include bp(bm){
+            display: none;
+        }
+        .btn {
+            font-size: 24px;
+            text-align: center;
+            color: white;
+            background: rgba(64, 64, 64, 0.79);
+            border-radius: 20px;
+            padding: 10px 30px;
+            border: none;
         }
     }
 }
@@ -116,9 +150,6 @@ nav li.active a,
 body.fp-viewing-fifthSection-1 #menu li:last-child a {
     background: #453659;
 }
-
-
-
 
 /* SLIDENAV STYLES - fullPage.js 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

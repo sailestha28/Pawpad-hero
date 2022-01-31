@@ -1,7 +1,3 @@
-
-
-
-
 // ------------step-wizard-------------
 $(document).ready(function () {
   // $('.nav-tabs > li a[title]').tooltip();
@@ -10,7 +6,7 @@ $(document).ready(function () {
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 
     var target = $(e.target);
-console.log(target);
+    console.log(target);
     if (target.parent().hasClass('disabled')) {
       return false;
     }
@@ -80,14 +76,21 @@ $(document).ready(function () {
         $('#fp-nav').hide();
       }
 
-      // history.pushState(null, null, "index.html");
+      // history.pushState(null, null, " ");
     },
 
     onLeave: function (index, nextIndex, direction) {
       if (index == 5) {
         $('#fp-nav').show();
       }
-      // history.pushState(null, null, "index.html");
+      // history.pushState(null, null, " ");
+      setTimeout(() => {
+        $('.section-2.active .animate:first-child').hide();
+      }, 2000);
+      setTimeout(() => {
+        $('.section-2.active .animate-area  ').show();
+        $('.section-2.active .animate-area  ').addClass('starting');
+      }, 2100);
     },
 
     afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
@@ -114,6 +117,14 @@ $(document).ready(function () {
       }
     }
   });
+  $.fn.fullpage.setMouseWheelScrolling(false);
+  $.fn.fullpage.setAllowScrolling(false);
+
+
+
+
+
+
 
 });
 
@@ -122,16 +133,33 @@ $(document).ready(function () {
 
 
 
+$(document).ready(function () {
+  $(window).on('load', function () {
+    $('.vertical-scrolling .animate-area  ').hide();
+    $('.vertical-scrolling .animate-area-2  ').hide();
+    setTimeout(() => {
+      $('.section-1.active .animate:first-child').hide();
+    }, 2000);
+    setTimeout(() => {
+      $('.section-1.active .animate-area  ').show();
+      $('.section-1.active .animate-area  ').addClass('starting');
+    }, 2100);
+    setTimeout(() => {
+      $('.section-1.active .starting  .title ').addClass('SlideInLeftRemove');
 
+    }, 4000);
+    setTimeout(() => {
+      $('.section-1.active  ').addClass('green');
 
+    }, 5000);
 
+  });
 
+});
 
-
-
-
-
-
-
-
-
+$(window).scroll( function () {
+  var scrollActive = $('.vertical-scrolling.active');
+    console.log('scrollActive');
+   
+  
+    });
