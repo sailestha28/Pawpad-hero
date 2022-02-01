@@ -47,11 +47,17 @@
       color: #fff;
       text-align: center;
       margin-bottom: 10px;
+      @include bp(md){
+       font-size: 16px;
+      }
     }
   }
   img {
     animation: updown 1500ms infinite;
     animation-delay: 1s;
+    @include bp(md){
+      width: 26px;
+    }
   }
 }
 
@@ -59,7 +65,11 @@
   /*----------Custom-Checkbox---------*/
   .checkbox-wrap {
     position: relative;
-    input[type="radio"] {
+    @include bp(bt){
+      margin-bottom: 15px;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
       position: initial;
       visibility: hidden;
       display: none;

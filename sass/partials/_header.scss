@@ -40,7 +40,15 @@
             transition: all 0.3s;
         }
     }
+    .l-left{
+        @include bp(bm){
+            img{
+                width: 90px;
+            }
+        }
+    }
     .l-middle {
+        display: none;
         .desktop-image {
             @include bp(bm) {
                 display: none;
@@ -57,7 +65,7 @@
             display: none;
         }
         .btn {
-            font-size: 24px;
+            font-size: 20px;
             text-align: center;
             color: white;
             background: rgba(64, 64, 64, 0.79);
@@ -193,7 +201,7 @@ body.fp-viewing-fifthSection-1 #menu li:last-child a {
             display: block;
             a {
                 font-size: 14px;
-                &::after{
+                &::after {
                     width: 150px;
                 }
             }
@@ -209,7 +217,7 @@ body.fp-viewing-fifthSection-1 #menu li:last-child a {
             display: block;
             a {
                 font-size: 14px;
-                &::after{
+                &::after {
                     width: 150px;
                 }
             }
@@ -219,13 +227,13 @@ body.fp-viewing-fifthSection-1 #menu li:last-child a {
         }
     }
 }
-body.fp-viewing-sixthSection{
+body.fp-viewing-sixthSection {
     #menu {
         li[data-menuanchor="fifthSection"] {
             display: block;
             a {
                 font-size: 14px;
-                &::after{
+                &::after {
                     width: 150px;
                 }
             }
@@ -235,7 +243,7 @@ body.fp-viewing-sixthSection{
         }
     }
 }
-.fp-viewing-seventhSection-0{
+.fp-viewing-seventhSection-0 {
     #menu {
         display: none;
         li[data-menuanchor="fifthSection"] {
@@ -256,7 +264,7 @@ body.fp-viewing-sixthSection{
     top: 50%;
     z-index: 111;
     transform: translateY(-50%);
-    @include bp(bm) {
+ @include bp(bt){
         display: none;
     }
     ul {
@@ -310,6 +318,9 @@ body.fp-viewing-sixthSection{
     top: 75%;
     z-index: 11;
     transform: translateX(calc(50% - 32px));
+    @include bp(bm){
+        display: none;
+    }
     p {
         margin-bottom: 0;
         color: white;
@@ -321,13 +332,21 @@ body.fp-viewing-sixthSection{
         text-align: center;
         transform: rotate(90deg);
     }
+    a{
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+    }
 }
 
-.production-by{
+.production-by {
     position: fixed;
     right: 76px;
     bottom: 30px;
     z-index: 11;
+    @include bp(bm){
+        display: none;
+    }
     p {
         margin-bottom: 0;
         color: white;
@@ -341,6 +360,9 @@ body.fp-viewing-sixthSection{
     right: 30px;
     bottom: 30px;
     z-index: 11;
+    @include bp(bm){
+        display: none;
+    }
     .fab {
         color: #fff;
         font-size: 16px;
