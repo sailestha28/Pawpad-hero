@@ -144,6 +144,7 @@
             z-index: auto;
         }
     }
+
     .text {
         color: #ffffff;
         position: absolute;
@@ -154,6 +155,7 @@
         padding: 0 30px;
         white-space: nowrap;
         overflow-x: auto;
+        display: none;
 
         @include up(bt) {
             font-size: 36px;
@@ -166,7 +168,9 @@
             font-size: 26px;
         }
         @include bp(bm) {
-            font-size: 24px;
+            font-size: 36px;
+            display: block;
+            overflow: hidden;
         }
     }
 
@@ -211,6 +215,7 @@
                 width: 100%;
                 margin-left: 0;
                 margin-right: 0;
+                position: relative;
             }
             &:nth-child(1) {
                 @include up(bm) {
@@ -260,6 +265,25 @@
                 }
                 @include bp(bm) {
                     display: none;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    z-index: 11;
+                    background: inherit;
+                    margin-top: 10px;
+                    border-radius: 20px;
+                    padding: 20px;
+                    &::before {
+                        content: "";
+                        height: 10px;
+                        width: 10px;
+                        background-color: inherit;
+                        display: inline-block;
+                        position: absolute;
+                        left: 50%;
+                        top: -5px;
+                        transform: rotate(45deg);
+                    }
                 }
                 p {
                     font-size: 24px;
@@ -298,6 +322,22 @@
             }
             &:not(:last-child) {
                 margin-bottom: 45px;
+            }
+            &.tip-show {
+                .textarea {
+                    @include bp(bm) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    &.active {
+        .text {
+            @include bp(bm) {
+                -webkit-animation: linear infinite;
+                -webkit-animation-name: SlideInLeftTest;
+                -webkit-animation-duration: 5s;
             }
         }
     }
@@ -450,7 +490,7 @@
         }
         .btn {
             border: none;
-            padding: 30px 30px;
+            padding: 30px 70px;
             color: #fff;
             background: #00000047;
             mix-blend-mode: normal;
@@ -462,6 +502,9 @@
             font-weight: 600;
             font-size: 14px;
             text-align: center;
+            @include bp(bt) {
+                padding: 30px 30px;
+            }
             @include bp(bm) {
                 width: 50%;
                 padding: 20px 10px;
@@ -610,7 +653,7 @@
         @include bp(bm) {
             font-size: 20px;
         }
-        @include bp(m){
+        @include bp(m) {
             font-size: 18px;
         }
     }
@@ -621,6 +664,7 @@
         display: flex;
         flex-wrap: wrap;
         width: calc(100% + 30px);
+        max-width: 500px;
     }
     .input-area {
         font-weight: 600;
@@ -648,7 +692,7 @@
         width: calc(100% - 170px);
         padding-right: 0;
         border-radius: 10px 20px 20px 10px;
-        @include bp(bm){
+        @include bp(bm) {
             width: calc(100% - 150px);
         }
     }
@@ -656,7 +700,7 @@
         width: 170px;
         position: relative;
         right: 35px;
-        @include bp(bm){
+        @include bp(bm) {
             width: 150px;
         }
         .btn {
@@ -689,7 +733,7 @@
             @include bp(lg) {
                 font-size: 28px;
             }
-            @include bp(bm){
+            @include bp(bm) {
                 font-size: 20px;
             }
         }
@@ -702,7 +746,7 @@
                     @include bp(lg) {
                         font-size: 28px;
                     }
-                    @include bp(bm){
+                    @include bp(bm) {
                         font-size: 20px;
                     }
                 }

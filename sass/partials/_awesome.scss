@@ -1,0 +1,184 @@
+/* awesome scss */
+.announcement-modal {
+    background-image: url(../images/awesome.png);
+    background: linear-gradient(180deg, #fd7b97 0%, rgba(253, 128, 109, 0.69) 54.17%, #fd997a 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    @include up(bt) {
+        min-height: calc(100vh);
+    }
+    &::before {
+        content: "";
+        background-image: url(../images/awesome.png);
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-repeat: no-repeat;
+        width: 470px;
+        height: 567px;
+        background-size: contain;
+    }
+
+    .modal {
+        &-dialog {
+            width: 830px;
+            margin: 0 auto;
+            padding: 100px 0 110px;
+            @include bp(bt){
+                width: 100%;
+                padding-left: 30px;
+                padding-right: 30px;
+                width: 750px;
+            }
+
+
+            @include bp(m) {
+              padding-top: 60px;
+              padding-bottom: 60px;
+                width: 100%;
+            }
+        }
+
+        &-content {
+            padding: 50px 30px 40px;
+            background: #00000094;
+            border-radius: 60px;
+            border: none;
+            position: relative;
+            z-index: 1;
+
+            @include bp(m) {
+                padding: 30px 20px;
+            }
+        }
+
+        &-header {
+            padding: 0;
+            text-align: center;
+            border: none;
+            display: block;
+        }
+
+        &-title {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 30px;
+            font-family: "Eveleth Regular";
+            font-size: 44px;
+            text-align: center;
+
+            color: #ffffff;
+            @include bp(bm){
+                font-size: 26px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &-body {
+            text-align: center;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 698px;
+
+            label {
+                text-align: center;
+                color: #fff;
+                display: inline-block;
+                margin-bottom: 45px;
+                font-size: 26px;
+                @include bp(bm){
+                    font-size: 20px;
+                }
+
+                @include bp(m) {
+                    font-size: 16px;
+                    margin-bottom: 30px;
+                }
+                p {
+                    color: #fff;
+                }
+            }
+
+            .highlight {
+                display: inline-block;
+                background: #fd997a;
+                color: white;
+                padding: 0px 15px;
+                border-radius: 50px;
+            }
+
+            .question-wrap {
+                strong {
+                    text-align: center;
+                    color: #fff;
+                    font-weight: 600;
+                    font-size: 26px;
+                    @include bp(m) {
+                        font-size: 16px;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    text-align: center;
+                    color: #ffffff;
+                    @include bp(m) {
+                        font-size: 16px;
+                    }
+
+                }
+            }
+
+            .share-link {
+                margin-bottom: 40px;
+
+                p {
+                    font-size: 18px;
+                    line-height: 21px;
+                    text-align: center;
+
+                    color: #ffffff;
+                    @include bp(m) {
+                        font-size: 16px;
+                    }
+
+                    a {
+                        font-weight: 600;
+                        font-size: 13px;
+                        line-height: 19px;
+                        text-align: center;
+                        text-decoration-line: underline;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .notice-label {
+                p {
+                    font-size: 18px;
+                    line-height: 21px;
+                    text-align: center;
+                    color: #ffffff;
+                    @include bp(m) {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .close {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        margin: 0;
+        top: 0;
+        right: 0;
+    }
+}
+
+/* awesome scss */
