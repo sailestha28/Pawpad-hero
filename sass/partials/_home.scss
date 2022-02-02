@@ -172,6 +172,7 @@
             display: block;
             overflow: initial;
             padding: 0 0px;
+            top: 100px;
         }
     }
 
@@ -323,6 +324,9 @@
             }
             &:not(:last-child) {
                 margin-bottom: 45px;
+                @include bp(bm){
+                    margin-bottom: 30px;
+                }
             }
             &.tip-show {
                 .textarea {

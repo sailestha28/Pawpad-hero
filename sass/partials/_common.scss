@@ -1,5 +1,19 @@
 /* ### Common scss */
 
+#admin_bar .admin-bar-container {
+  display: block;
+  margin: 0;
+  padding: 0 15px;
+  width: 100%;
+}
+#admin_bar,
+#admin_bar * {
+  box-sizing: border-box;
+  color: #fff;
+}
+
+#admin_bar { display:none !important }
+
 .container {
   padding-left: 30px;
   padding-right: 30px;
@@ -181,7 +195,7 @@
           display: inline-block;
           opacity: 0;
           visibility: visible;
-          @include bp(bm){
+          @include bp(bm) {
             top: 15px;
           }
         }
