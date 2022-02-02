@@ -28,7 +28,7 @@
         height: 50px;
         display: none;
         @include bp(bm) {
-            display: block;
+            // display: block;
         }
         i {
             position: absolute;
@@ -42,6 +42,10 @@
     }
     .l-left{
         @include bp(bm){
+            float: left;
+            width: 100%;
+            text-align: center;
+            line-height: 45px;
             img{
                 width: 90px;
             }

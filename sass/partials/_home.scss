@@ -132,14 +132,14 @@
     &::before {
         content: "";
         @include bp(bm) {
-            background-image: url(../images/background.png);
+            background-image: url(../images/dog-mob.png);
             background-repeat: no-repeat;
             background-size: cover;
             position: absolute;
             left: 0;
             bottom: 0;
             display: inline-block;
-            width: 201px;
+            width: 156px;
             height: 212px;
             z-index: auto;
         }
@@ -170,7 +170,8 @@
         @include bp(bm) {
             font-size: 36px;
             display: block;
-            overflow: hidden;
+            overflow: initial;
+            padding: 0 0px;
         }
     }
 
@@ -337,7 +338,7 @@
             @include bp(bm) {
                 -webkit-animation: linear infinite;
                 -webkit-animation-name: SlideInLeftTest;
-                -webkit-animation-duration: 5s;
+                -webkit-animation-duration: 10s;
             }
         }
     }
@@ -347,14 +348,14 @@
     &::before {
         content: "";
         @include bp(bm) {
-            background-image: url(../images/background.png);
+            background-image: url(../images/dog-mob-2.png);
             background-repeat: no-repeat;
             background-size: cover;
             position: absolute;
             left: 0;
             bottom: 0;
             display: inline-block;
-            width: 201px;
+            width: 184px;
             height: 212px;
             z-index: auto;
         }

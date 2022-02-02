@@ -47,15 +47,15 @@
       color: #fff;
       text-align: center;
       margin-bottom: 10px;
-      @include bp(md){
-       font-size: 16px;
+      @include bp(md) {
+        font-size: 16px;
       }
     }
   }
   img {
     animation: updown 1500ms infinite;
     animation-delay: 1s;
-    @include bp(md){
+    @include bp(md) {
       width: 26px;
     }
   }
@@ -65,7 +65,7 @@
   /*----------Custom-Checkbox---------*/
   .checkbox-wrap {
     position: relative;
-    @include bp(bt){
+    @include bp(bt) {
       margin-bottom: 15px;
     }
     input[type="radio"],
@@ -163,6 +163,11 @@
         cursor: pointer;
         position: relative;
         font-size: 14px;
+        @include bp(bm) {
+          width: 100%;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
 
         &::after {
           content: "";
@@ -176,6 +181,9 @@
           display: inline-block;
           opacity: 0;
           visibility: visible;
+          @include bp(bm){
+            top: 15px;
+          }
         }
         span {
           display: inline-block;
