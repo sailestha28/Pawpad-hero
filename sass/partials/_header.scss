@@ -117,7 +117,7 @@ nav {
     transition: all 3s;
 }
 
-.open-menu ~ nav {
+.open-menu~nav {
     opacity: 1;
     padding: 80px 0;
     z-index: 15;
@@ -162,6 +162,7 @@ nav li.active a,
 body.fp-viewing-fifthSection-1 #menu li:last-child a {
     background: #453659;
 }
+
 
 /* SLIDENAV STYLES - fullPage.js 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -215,6 +216,7 @@ body.fp-viewing-fifthSection-1 #menu li:last-child a {
         }
     }
 }
+
 .fp-viewing-thirdSection {
     #menu {
         li[data-menuanchor="firstSection"] {
@@ -231,6 +233,7 @@ body.fp-viewing-fifthSection-1 #menu li:last-child a {
         }
     }
 }
+
 body.fp-viewing-sixthSection {
     #menu {
         li[data-menuanchor="fifthSection"] {
@@ -247,6 +250,7 @@ body.fp-viewing-sixthSection {
         }
     }
 }
+
 .fp-viewing-seventhSection-0 {
     #menu {
         display: none;
@@ -261,6 +265,7 @@ body.fp-viewing-sixthSection {
         }
     }
 }
+
 .js-navigation {
     display: block;
     position: fixed;
@@ -287,8 +292,8 @@ body.fp-viewing-sixthSection {
                 position: absolute;
                 right: 0;
                 bottom: 0;
+                transition: width ease 0.3s;
             }
-
             a {
                 position: relative;
                 font-size: 0;
@@ -303,7 +308,6 @@ body.fp-viewing-sixthSection {
                 // margin-bottom: 10px;
                 padding-right: 5px;
             }
-
             &.active {
                 a::after {
                     width: 150px;
@@ -316,6 +320,7 @@ body.fp-viewing-sixthSection {
         }
     }
 }
+
 .madeby {
     position: fixed;
     right: 5px;
@@ -325,7 +330,6 @@ body.fp-viewing-sixthSection {
     @include bp(lg) {
         top: 70%;
     }
-
     @include bp(bm) {
         display: none;
     }
@@ -366,7 +370,7 @@ body.fp-viewing-sixthSection {
 
 .social-icons {
     position: fixed;
-    right: 30px;
+    right: 26px;
     bottom: 30px;
     z-index: 11;
     @include bp(bm) {
@@ -376,7 +380,12 @@ body.fp-viewing-sixthSection {
         color: #fff;
         font-size: 16px;
     }
+    i.fab.fa-medium {
+        font-size: 12px;
+    }
 }
+
+
 /* =============
 ###End header scss
 =================*/
