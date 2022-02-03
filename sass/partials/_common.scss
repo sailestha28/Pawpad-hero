@@ -13,9 +13,6 @@
         max-width: 970px;
     }
     @include up(sm) {
-        max-width: 1170px;
-    }
-    @include up(lg) {
         max-width: 100%;
         padding-left: 60px;
         padding-right: 60px;

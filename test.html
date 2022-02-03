@@ -15,8 +15,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/fullpage.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.css">
     <link rel="stylesheet" href="css/main.css" />
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .fp-bg {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .fp-section.fp-table,
+        .fp-slide.fp-table {
+            overflow: hidden;
+        }
+        
+        .fp-tableCell {
+            position: relative;
+        }
+        
+        .fp-bg {
+            -webkit-transition: transform 1000ms ease;
+            -moz-transition: transform 1000ms ease;
+            -ms-transition: transform 1000ms ease;
+            -o-transition: transform 1000ms ease;
+            transition: transform 1000ms ease;
+        }
+        
+        section {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -53,29 +95,29 @@
         <div class="js-navigation">
             <ul id="menu">
                 <li data-menuanchor="firstSection">
-                    <a href="javascript:void(0);" title="First Section">Info</a>
+                    <a href="#firstSection" title="First Section">Info</a>
                     <!-- <a href="#firstSection" title="First Section">Info</a> -->
                 </li>
                 <li data-menuanchor="secondSection" class="active">
                     <a href="#secondSection" title="Second Section">Info</a>
                 </li>
                 <li data-menuanchor="thirdSection">
-                    <a href="javascript:void(0);" title="third Section">Third Section</a>
+                    <a href="#thirdSection" title="third Section">Third Section</a>
                 </li>
                 <li data-menuanchor="fourthSection">
-                    <a href="javascript:void(0);" title="Fourth Section">Features</a>
+                    <a href="#fourthSection" title="Fourth Section">Features</a>
                 </li>
                 <li data-menuanchor="fifthSection">
-                    <a href="javascript:void(0);" title="First Slide">Join us</a>
+                    <a href="#fifthSection" title="First Slide">Join us</a>
                 </li>
                 <li data-menuanchor="sixthSection">
-                    <a href="javascript:void(0);" title="Second Slide">Second Slide</a>
+                    <a href="#sixthSection" title="Second Slide">Second Slide</a>
                 </li>
                 <li data-menuanchor="seventhSection">
-                    <a href="javascript:void(0);" title="Second Slide">Second Slide</a>
+                    <a href="#seventhSection" title="Second Slide">Second Slide</a>
                 </li>
                 <li data-menuanchor="eightSection">
-                    <a href="javascript:void(0);" title="Second Slide">Contact us</a>
+                    <a href="#eightSection" title="Second Slide">Contact us</a>
                 </li>
             </ul>
         </div>
@@ -116,12 +158,14 @@
     </header>
     <div class="page-container">
         <div id="fullpage">
-            <section class="vertical-scrolling section-1">
+            <div class="section section-1" id="section1">
+                <!-- <div class="fp-bg" style="background-image: url(https://alvarotrigo.com/fullPage/extensions/imgs/parallax/parallax-1-1.jpg)"></div> -->
                 <div class="animate">
                     <div class="container">
                         <div class="content-wrap">
+
                             <h1 class="logo-wrap">
-                                HIRO.
+                                <img src="images/big-logo.svg" alt="tgest" width="100%" height="100%">
                             </h1>
                         </div>
                     </div>
@@ -131,7 +175,7 @@
                         <div class="content-wrap">
                             <h3 class="title animate-reveal animate-first ">Be the</h3>
                             <div class="img-thumb animate-reveal animate-second">
-                                HIRO.
+                                <img src="images/big-logo.svg" alt="tgest" width="100%" height="100%">
                             </div>
                             <h3 class="title last animate-reveal animate-third">
                                 your pet thinks you are.
@@ -146,19 +190,17 @@
                         <img src="images/click-arrow-new.svg" alt="click item">
                     </a>
                 </div>
-            </section>
-            <!-- end section -->
-            <section class="vertical-scrolling section-2">
+            </div>
+            <!-- end section 1 -->
 
+            <div class="section section-2" id="section2">
+                <!-- <div class="fp-bg" style="background-image: url(https://alvarotrigo.com/fullPage/extensions/imgs/parallax/parallax-3.jpg)"></div> -->
                 <div class="no-animate">
                     <div class="container">
-                        <div class="content-wrap">
 
-
-                            <h2 class="text animate-reveal animate-first">Whether adopted, found, bought or borrowed, you are everything to your pet. No matter what’s going on in your life, they will be loyal, loving, affectionate (sometimes) and think the world of you. Don’t they deserve the world
-                                in return?
-                            </h2>
-                        </div>
+                        <h2 class="text animate-reveal animate-first">Whether adopted, found, bought or borrowed, you are everything to your pet. No matter what’s going on in your life, they will be loyal, loving, affectionate (sometimes) and think the world of you. Don’t they deserve the world in
+                            return?
+                        </h2>
                     </div>
                 </div>
                 <div class="scroll-icon">
@@ -168,23 +210,21 @@
                         <img src="images/click-arrow-new.svg" alt="click item">
                     </a>
                 </div>
-            </section>
+            </div>
+            <!-- end section 2 -->
 
-            <!-- end section -->
-            <section class="vertical-scrolling section-3">
+            <div class="section section-3" id="section3">
+                <!-- <div class="fp-bg" style="background-image: url(https://alvarotrigo.com/fullPage/extensions/imgs/parallax/parallax-2.jpg)"></div> -->
 
                 <div class="no-animate">
                     <div class="container">
-                        <div class="content-wrap">
 
-
-                            <h2 class="text animate-reveal animate-first">We knew you’d get it!
-                                <br>
-                                <br> That’s why we created HIRO - a connected pet care platform to simplify pet care while maximising life together through engagement and community.
-                                <br>
-                                <br> Are you in?
-                            </h2>
-                        </div>
+                        <h2 class="text animate-reveal animate-first">We knew you’d get it!
+                            <br>
+                            <br> That’s why we created HIRO - a connected pet care platform to simplify pet care while maximising life together through engagement and community.
+                            <br>
+                            <br> Are you in?
+                        </h2>
                     </div>
                 </div>
                 <div class="scroll-icon">
@@ -194,45 +234,48 @@
                         <img src="images/click-arrow-new.svg" alt="click item">
                     </a>
                 </div>
-            </section>
-
-            <!-- end section -->
-
-            <section class="vertical-scrolling section-4">
+            </div>
+            <!-- end section 3 -->
+            <div class="section section-4" id="section4">
+                <!-- <div class="fp-bg" style="background-image: url(https://alvarotrigo.com/fullPage/extensions/imgs/parallax/parallax-4.jpg)"></div> -->
                 <div class="container">
-                    <div class="content-wrap">
-                        <h2 class="text">
-                            Be the hiro your pet thinks you are.
-                        </h2>
-                        <div class="actions">
-                            <a href="#" class="btn btn-heart">
-                                <label>Health</label>
-                                <span class="icon heart">  </span>
-                                <div class="textarea">
-                                    <p>
-                                        Feature pillar description lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="#" class="btn btn-smiley">
-                                <label>              community            </label>
-                                <span class="icon smiley">            </span>
-                                <div class="textarea">
-                                    <p>
-                                        Feature pillar description lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="#" class="btn btn-cookie">
-                                <label>Shopping</label>
-                                <span class="icon cookie">           </span>
-                                <div class="textarea">
-                                    <p>
-                                        Feature pillar description lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
+
+                    <h2 class="text">
+                        Be the hiro your pet thinks you are.
+                    </h2>
+                    <div class="actions">
+                        <a href="#" class="btn btn-heart">
+                            <label>Health</label>
+                            <span class="icon heart">
+
+            </span>
+                            <div class="textarea">
+                                <p>
+                                    Feature pillar description lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="btn btn-smiley">
+                            <label>
+              community
+            </label> <span class="icon smiley">
+
+            </span>
+                            <div class="textarea">
+                                <p>
+                                    Feature pillar description lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="btn btn-cookie">
+                            <label>Shopping</label>
+                            <span class="icon cookie">            </span>
+                            <div class="textarea">
+                                <p>
+                                    Feature pillar description lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                </p>
+                            </div>
+                        </a>
                     </div>
                     <div class="scroll-icon">
                         <a href="#fifthSection/1" class="icon-up-open-big">
@@ -241,26 +284,25 @@
                         </a>
                     </div>
                 </div>
-            </section>
-
-            <section class="vertical-scrolling section-5">
+            </div>
+            <div class="section section-5" id="section5">
                 <div class="container">
-                    <div class="content-wrap">
-                        <h2 class="text">Sound good? We hope so!
-                            <br>
-                            <br> Want to help us build it? We’re looking for passionate pet owners to come with us on the journey to make sure we’re building what communities need.
-                        </h2>
-                        <div class="scroll-icon">
 
-                            <a href="#sixthSection/1" class="icon-up-open-big">
-                                <label>What does it do?</label>
-                                <img src="images/click-arrow-new.svg" alt="click item">
-                            </a>
-                        </div>
+                    <h2 class="text">Sound good? We hope so!
+                        <br>
+                        <br> Want to help us build it? We’re looking for passionate pet owners to come with us on the journey to make sure we’re building what communities need.
+                    </h2>
+                    <div class="scroll-icon">
+
+                        <a href="#sixthSection/1" class="icon-up-open-big">
+                            <label>What does it do?</label>
+                            <img src="images/click-arrow-new.svg" alt="click item">
+                        </a>
                     </div>
                 </div>
-            </section>
-            <section class="vertical-scrolling section-6">
+            </div>
+            <!-- end section 5 -->
+            <div class="section section-6" id="section6">
                 <div class="container">
 
                     <section class="signup-step-container">
@@ -471,9 +513,9 @@
 
 
                 </div>
-            </section>
-
-            <section class="vertical-scrolling section-7">
+            </div>
+            <!-- end section 6 -->
+            <div class="section section-7">
                 <div class="horizontal-scrolling container ">
                     <h2 class="text">Collect as many treats as you can to get on the leaderboard to win a spot on our beta and some launch prizes. Be sure to leave your email address so that we can contact you!
                     </h2>
@@ -481,84 +523,37 @@
                         <img class="desktop-image" src="images/rocky-pass-desktop.png" alt="test" width="100%" height="100%">
                         <img class="mobile-image" src="images/rocky-pass.png" alt="test" width="294" height="342">
                     </figure>
-                    <div class="scroll-icon">
-
-                        <a href="#eightSection" class="icon-up-open-big">
-                            <label>What does it do?</label>
-                            <img src="images/click-arrow-new.svg" alt="click item">
-                        </a>
+                    <div class="madeby">
+                        <p>Made by&nbsp;<a target="_blank" href="www.fatdog.agency">FATDOG</a></p>
                     </div>
-            </section>
-            <section class="vertical-scrolling section-8">
-                <div class="container ">
-                    <div class="contact-wrap">
-                        <h2 class="text">nO TIME FOR FUN?
-
-                        </h2>
-
-                        <h3 class="sub-text">
-                            We’ll put you on the list and let you know when HIRO is ready to go!
-                        </h3>
-                        <form action="" class="form-area">
-                            <div class="field-area">
-                                <input type="email" placeholder="Email address" class="input-area">
-
-                            </div>
-                            <div class="action">
-                                <button class="btn btn-submit">Submit</button>
-                            </div>
-                        </form>
-
-                        <div class="widget-explore">
-                            <h3 class="wgt-title">
-                                EXPLORE
-                            </h3>
-                            <ul>
-                                <li>
-                                    <a href="#">Partner with us</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Terms of use</a>
-                                </li>
 
 
-                            </ul>
-                        </div>
-                        <div class="madeby">
-                            <p>Made by&nbsp;<a target="_blank" href="www.fatdog.agency">FATDOG</a></p>
-                        </div>
+                    <div class="social-icons">
+                        <ul>
+                            <li>
+                                <a href="www.instagram.com">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="www.facebook.com">
+                                    <i class="fab fa-facebook-square"></i>
 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="www.twitter.com">
+                                    <i class="fab fa-twitter"></i>
 
-                        <div class="social-icons">
-                            <ul>
-                                <li>
-                                    <a href="www.instagram.com">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="www.facebook.com">
-                                        <i class="fab fa-facebook-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="www.medium.com">
+                                    <i class="fab fa-medium"></i>
 
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="www.twitter.com">
-                                        <i class="fab fa-twitter"></i>
-
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="www.medium.com">
-                                        <i class="fab fa-medium"></i>
-
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="scroll-icon">
                         <a href="#firstSection/1" class="icon-up-open-big go-to-top">
@@ -566,21 +561,27 @@
                             <img src="images/click-arrow-new.svg" alt="click item">
                         </a>
                     </div>
+                    <div class="scroll-icon">
+
+                        <a href="#eightSection" class="icon-up-open-big">
+                            <label>What does it do?</label>
+                            <img src="images/click-arrow-new.svg" alt="click item">
+                        </a>
+                    </div>
                 </div>
-            </section>
-
-
             </div>
         </div>
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="js/fullpage.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/vendors/jquery.easings.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/vendors/scrolloverflow.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.3/fullpage.js"></script>
 
 
-        <script type="text/javascript" src="js/custom.js">
+        <script type="text/javascript" src="js/new-custom.js">
         </script>
 
 
