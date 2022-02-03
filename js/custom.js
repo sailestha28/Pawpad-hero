@@ -83,12 +83,12 @@ $(document).ready(function() {
                 $('.section-1 .animate-area  ').removeClass('starting');
                 $('.section-1 .starting  .title ').removeClass('SlideInLeftRemove');
                 $('.vertical-scrolling.section-1 .animate').show();
-                $('.section-1 .animate-area  ').hide();
+                // $('.section-1 .animate-area  ').hide();
                 setTimeout(() => {
-                    $('.section-1.active .animate:first-child').hide();
+                    // $('.section-1.active .animate:first-child').hide();
                 }, 2000);
                 setTimeout(() => {
-                    $('.section-1.active .animate-area  ').show();
+                    // $('.section-1.active .animate-area  ').show();
                     $('.section-1.active .animate-area  ').addClass('starting');
                 }, 2100);
                 setTimeout(() => {
@@ -98,7 +98,7 @@ $(document).ready(function() {
                 setTimeout(() => {
                     $('.fp-viewing-firstSection .page-container  ').addClass('green');
 
-                }, 5000);
+                }, 1600);
 
 
 
@@ -208,14 +208,15 @@ $(document).ready(function() {
 
 
     $(window).on('load', function() {
-        $('.vertical-scrolling .animate-area  ').hide();
+        $(".img-thumb").fadeIn(3000);
+        // $('.vertical-scrolling .animate-area  ').hide();
         setTimeout(() => {
-            $('.section-1.active .animate:first-child').hide();
+            // $('.section-1.active .animate:first-child').hide();
         }, 2000);
         setTimeout(() => {
-            $('.section-1.active .animate-area  ').show();
+            // $('.section-1.active .animate-area  ').show();
             $('.section-1.active .animate-area  ').addClass('starting');
-        }, 2100);
+        }, 1000);
         setTimeout(() => {
             $('.section-1.active .starting  .title ').addClass('SlideInLeftRemove');
 
@@ -223,13 +224,10 @@ $(document).ready(function() {
         setTimeout(() => {
             $('.section-1.active  ').addClass('green');
 
-        }, 5000);
+        }, 1200);
 
     });
     // }
 
-    $('body').on('click', '.go-to-top', function() {
-
-    })
 
 });

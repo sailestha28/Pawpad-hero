@@ -66,6 +66,110 @@
     }
 }
 
+@-webkit-keyframes SlideInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes SlideInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@-o-keyframes SlideInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes SlideInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -o-transform: translateX-(100%);
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(-0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes FadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes FadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes FadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes FadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 // remove
 @-webkit-keyframes SlideInLeftRemove {
     0% {
@@ -167,10 +271,10 @@
 .starting {
     .animate-reveal {
         opacity: 0;
-        -webkit-animation: SlideInLeft 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
-        -moz-animation: SlideInLeft 1s ease-in 1 normal forwards;
-        -o-animation: SlideInLeft 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
-        animation: SlideInLeft 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+        -webkit-animation: SlideInRight 2s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+        -moz-animation: SlideInRight 2s ease-in 1 normal forwards;
+        -o-animation: SlideInRight 2s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+        animation: SlideInRight 2s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
         // &.SlideInLeftRemove{
         //     opacity: 1;
         //     -webkit-animation: SlideInLeftRemove 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
@@ -198,15 +302,19 @@
         animation-delay: 500ms;
     }
     .animate-third {
-        -webkit-animation-delay: 1s;
-        -moz-animation-delay: 1s;
-        -o-animation-delay: 1s;
-        animation-delay: 1s;
+        // -webkit-animation-delay: 1s;
+        // -moz-animation-delay: 1s;
+        // -o-animation-delay: 1s;
+        // animation-delay: 1s;
         // &.SlideInLeftRemove{
-        //     -webkit-animation-delay: .5s;
-        //     -moz-animation-delay: .5s;
-        //     -o-animation-delay: .5s;
-        //     animation-delay: .5s;
+        -webkit-animation-delay: 0.5s;
+        -moz-animation-delay: 0.5s;
+        -o-animation-delay: 0.5s;
+        animation-delay: 0.5s;
         // }
+        -webkit-animation: SlideInLeft 3s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+        -moz-animation: SlideInLeft 3s ease-in 1 normal forwards;
+        -o-animation: SlideInLeft 3s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+        animation: SlideInLeft 3s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
     }
 }
