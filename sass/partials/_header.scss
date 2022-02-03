@@ -40,13 +40,13 @@
             transition: all 0.3s;
         }
     }
-    .l-left {
-        @include bp(bm) {
+    .l-left{
+        @include bp(bm){
             float: left;
             width: 100%;
             text-align: center;
             line-height: 45px;
-            img {
+            img{
                 width: 90px;
             }
         }
@@ -117,7 +117,7 @@ nav {
     transition: all 3s;
 }
 
-.open-menu~nav {
+.open-menu ~ nav {
     opacity: 1;
     padding: 80px 0;
     z-index: 15;
@@ -162,7 +162,6 @@ nav li.active a,
 body.fp-viewing-fifthSection-1 #menu li:last-child a {
     background: #453659;
 }
-
 
 /* SLIDENAV STYLES - fullPage.js 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -216,7 +215,6 @@ body.fp-viewing-fifthSection-1 #menu li:last-child a {
         }
     }
 }
-
 .fp-viewing-thirdSection {
     #menu {
         li[data-menuanchor="firstSection"] {
@@ -233,7 +231,6 @@ body.fp-viewing-fifthSection-1 #menu li:last-child a {
         }
     }
 }
-
 body.fp-viewing-sixthSection {
     #menu {
         li[data-menuanchor="fifthSection"] {
@@ -250,7 +247,6 @@ body.fp-viewing-sixthSection {
         }
     }
 }
-
 .fp-viewing-seventhSection-0 {
     #menu {
         display: none;
@@ -265,7 +261,6 @@ body.fp-viewing-sixthSection {
         }
     }
 }
-
 .js-navigation {
     display: block;
     position: fixed;
@@ -273,7 +268,7 @@ body.fp-viewing-sixthSection {
     top: 50%;
     z-index: 111;
     transform: translateY(-50%);
-    @include bp(bt) {
+ @include bp(bt){
         display: none;
     }
     ul {
@@ -292,8 +287,8 @@ body.fp-viewing-sixthSection {
                 position: absolute;
                 right: 0;
                 bottom: 0;
-                transition: width ease 0.3s;
             }
+
             a {
                 position: relative;
                 font-size: 0;
@@ -308,6 +303,7 @@ body.fp-viewing-sixthSection {
                 // margin-bottom: 10px;
                 padding-right: 5px;
             }
+
             &.active {
                 a::after {
                     width: 150px;
@@ -320,17 +316,13 @@ body.fp-viewing-sixthSection {
         }
     }
 }
-
 .madeby {
     position: fixed;
     right: 5px;
     top: 75%;
     z-index: 11;
     transform: translateX(calc(50% - 32px));
-    @include bp(lg) {
-        top: 70%;
-    }
-    @include bp(bm) {
+    @include bp(bm){
         display: none;
     }
     p {
@@ -344,7 +336,7 @@ body.fp-viewing-sixthSection {
         text-align: center;
         transform: rotate(90deg);
     }
-    a {
+    a{
         color: white;
         font-weight: 700;
         text-decoration: none;
@@ -357,7 +349,7 @@ body.fp-viewing-sixthSection {
     right: 76px;
     bottom: 30px;
     z-index: 11;
-    @include bp(bm) {
+    @include bp(bm){
         display: none;
     }
     p {
@@ -370,22 +362,17 @@ body.fp-viewing-sixthSection {
 
 .social-icons {
     position: fixed;
-    right: 26px;
+    right: 30px;
     bottom: 30px;
     z-index: 11;
-    @include bp(bm) {
+    @include bp(bm){
         display: none;
     }
     .fab {
         color: #fff;
         font-size: 16px;
     }
-    i.fab.fa-medium {
-        font-size: 12px;
-    }
 }
-
-
 /* =============
 ###End header scss
 =================*/
