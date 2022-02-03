@@ -96,12 +96,14 @@ $(document).ready(function() {
 
                 }, 4000);
                 setTimeout(() => {
-                    $('.section-1.active  ').addClass('green');
+                    $('.fp-viewing-firstSection .page-container  ').addClass('green');
 
                 }, 5000);
 
 
 
+            } else {
+                $('body .page-container  ').removeClass('green');
             }
 
 

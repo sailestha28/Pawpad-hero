@@ -135,37 +135,34 @@
     }
 }
 
-
 @keyframes SlideInLeftTest {
     0% {
         // opacity: 0;
-        -webkit-transform: translateX(200%);
-        -moz-transform: translateX(200%);
-        -o-transform: translateX(200%);
-        transform: translateX(200%);
+        -webkit-transform: translateX(180%);
+        -moz-transform: translateX(180%);
+        -o-transform: translateX(180%);
+        transform: translateX(180%);
     }
     100% {
         // opacity: 1;
-        -webkit-transform: translateX(-200%);
-        -moz-transform: translateX(-200%);
-        -o-transform: translateX(-200%);
-        transform: translateX(-200%);
+        -webkit-transform: translateX(-220%);
+        -moz-transform: translateX(-220%);
+        -o-transform: translateX(-220%);
+        transform: translateX(-220%);
     }
 }
 
-
 @-webkit-keyframes fromRtoL {
     0% {
-      right: 0;
+        right: 0;
     }
     50% {
-      right: 50%;
+        right: 50%;
     }
     100% {
-      right: 0;    
+        right: 0;
     }
-  }
-
+}
 
 .starting {
     .animate-reveal {
@@ -182,7 +179,6 @@
         //     animation: SlideInLeftRemove 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
         // }
     }
-
     .animate-first {
         -webkit-animation-delay: 0;
         -moz-animation-delay: 0;
@@ -194,16 +190,13 @@
         //     -o-animation-delay: 0;
         //     animation-delay: 0;
         // }
-
     }
-
     .animate-second {
         -webkit-animation-delay: 500ms;
         -moz-animation-delay: 500ms;
         -o-animation-delay: 500ms;
         animation-delay: 500ms;
     }
-
     .animate-third {
         -webkit-animation-delay: 1s;
         -moz-animation-delay: 1s;
